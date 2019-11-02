@@ -1,0 +1,42 @@
+<div class="cal-slide-box" uib-collapse="vm.isCollapsed" mwl-collapse-fallback="vm.isCollapsed">
+  <div class="cal-slide-content cal-event-list">
+    <ul class="unstyled list-unstyled">
+
+      <li
+        ng-repeat="event in vm.events | orderBy:'startsAt' track by event.calendarEventId"
+        ng-class="event.cssClass"
+        mwl-draggable="event.draggable === true"
+        drop-data="{event: event}"
+        auto-scroll="vm.draggableAutoScroll">
+        <span class="pull-left event" ng-style="{backgroundColor: event.color.secondary}"></span>
+        &nbsp;
+        <a
+          href="javascript:;"
+          class="event-item"
+          ng-click="vm.onEventClick({calendarEvent: event})">
+          <span ng-style="{color: event.color.font}" ng-bind-html="isMonthView ? vm.calendarEventTitle.monthView(event) : vm.calendarEventTitle.yearView(event) | calendarTrustAsHtml"></span>
+        </a>
+
+        <div style="display: inline-block; vertical-align: super;">
+        <a
+          href="javascript:;"
+          class="event-item-action"
+          ng-class="action.cssClass"
+          ng-style="{
+              color: event.color.font ? event.color.font : '#337ab7'
+          }"
+          ng-repeat="action in event.actions track by $index"
+          ng-bind-html="action.label | calendarTrustAsHtml"
+            ng-click="action.onClick({calendarEvent: event})"
+            ng-if="action.show ? action.show({calendarEvent: event}) : true"
+            uib-tooltip="{{action.tooltip}}"
+            tooltip-is-enabled="{{ action.tooltip }}"
+            >
+        </a>
+        </div>
+
+      </li>
+
+    </ul>
+  </div>
+</div>

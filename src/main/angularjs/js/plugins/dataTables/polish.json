@@ -1,0 +1,57 @@
+{
+        "sEmptyTable": "Brak danych",
+        "sInfo": "Pozycje od _START_ do _END_ z _TOTAL_ łącznie",
+        "sInfoEmpty": "Pozycji 0 z 0 dostępnych",
+        "sInfoFiltered": "(filtrowanie spośród _MAX_ dostępnych pozycji)",
+        "sInfoPostFix": "",
+        "sInfoThousands": "",
+        "sLengthMenu": "Pokaż _MENU_ pozycji",
+        "sLoadingRecords": "Wczytywanie...",
+        "sProcessing": "Przetwarzanie...",
+        "sSearch": "Filtr:",
+        "sZeroRecords": "Nie znaleziono pasujących pozycji",
+        "oPaginate": {
+                "sFirst": "<<",
+                "sPrevious": "<",
+                "sNext": ">",
+                "sLast": ">>"
+        },
+        "oAria": {
+                "sSortAscending": ": aktywuj, by posortować kolumnę rosnąco",
+                "sSortDescending": ": aktywuj, by posortować kolumnę malejąco"
+        },
+        "buttons": {
+                "copyTitle": "Poprawnie skopiowano do schowka",
+                "copySuccess": {
+                        "_": "Skopiowano %d wierszy",
+                        "1": "Skopiowano 1 wiersz",
+                        "2": "Skopiowano 2 wiersze",
+                        "3": "Skopiowano 3 wiersze",
+                        "4": "Skopiowano 4 wiersze",
+                        "22": "Skopiowano 2 wiersze",
+                        "23": "Skopiowano 3 wiersze",
+                        "24": "Skopiowano 4 wiersze",
+                        "32": "Skopiowano 2 wiersze",
+                        "33": "Skopiowano 3 wiersze",
+                        "34": "Skopiowano 4 wiersze",
+                        "42": "Skopiowano 2 wiersze",
+                        "43": "Skopiowano 3 wiersze",
+                        "44": "Skopiowano 4 wiersze",
+                        "52": "Skopiowano 2 wiersze",
+                        "53": "Skopiowano 3 wiersze",
+                        "54": "Skopiowano 4 wiersze",
+                        "62": "Skopiowano 2 wiersze",
+                        "63": "Skopiowano 3 wiersze",
+                        "64": "Skopiowano 4 wiersze",
+                        "72": "Skopiowano 2 wiersze",
+                        "73": "Skopiowano 3 wiersze",
+                        "74": "Skopiowano 4 wiersze",
+                        "82": "Skopiowano 2 wiersze",
+                        "83": "Skopiowano 3 wiersze",
+                        "84": "Skopiowano 4 wiersze",
+                        "92": "Skopiowano 2 wiersze",
+                        "93": "Skopiowano 3 wiersze",
+                        "94": "Skopiowano 4 wiersze"
+                }
+        }
+}
