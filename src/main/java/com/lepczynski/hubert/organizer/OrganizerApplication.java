@@ -23,7 +23,12 @@ public class OrganizerApplication {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/**");
+                registry.addMapping("/**")
+                        .allowedOrigins("*")
+                        .allowedMethods("PUT", "DELETE","GET","POST")
+                        //.allowedHeaders("header1", "header2", "header3")
+                       // .exposedHeaders("header1", "header2")
+                        .allowCredentials(true).maxAge(3600);
             }
         };
     }

@@ -6,7 +6,7 @@ app.service('mainService',[
     var tasks;
     this.getTasksForUser = function (userId)
     {
-        /*console.log('work work');
+        console.log('work work');
         $http({
             method: 'GET',
             headers : {
@@ -22,7 +22,7 @@ app.service('mainService',[
         }, function errorCallback(response) {
             // called asynchronously if an error occurs
             // or server returns response with an error status.
-        });*/
+        });
     }
         }
     ]);
