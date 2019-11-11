@@ -52,8 +52,9 @@ app.controller('mainController',[
             $scope.totalTasks = $scope.tasks.length;
         }
         $scope.openAddTask = function()
-        {
-           $scope.addTaskOpened=true;
+        {            $scope.tasks = mainService.getTasksForUser(userid);
+
+            $scope.addTaskOpened=true;
 
 
         }

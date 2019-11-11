@@ -19,14 +19,5 @@ public class OrganizerApplication {
         return new ModelMapper();
     }
 
-    public WebMvcConfigurer corsConfigurer() {
-        return new WebMvcConfigurer() {
-            @Override
-            public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/**")
-                        .allowedOrigins("*")
-                        .allowedMethods("PUT", "DELETE", "GET","POST");
-            }
-        };
-    }
+
 }

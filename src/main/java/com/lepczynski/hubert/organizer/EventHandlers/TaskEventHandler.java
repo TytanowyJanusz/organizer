@@ -1,4 +1,4 @@
-package com.lepczynski.hubert.organizer.EventHandlers;
+/*package com.lepczynski.hubert.organizer.EventHandlers;
 
 import com.lepczynski.hubert.organizer.Repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +18,6 @@ public class TaskEventHandler
         //linking task to user? TODO make sure this is correct
         userRepository.findById(task.getUser().getId()).get().AddTask(task);
     }
+}
 
  */
-}

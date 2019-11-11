@@ -2,13 +2,13 @@ package com.lepczynski.hubert.organizer.Models;
 
 import lombok.Data;
 import org.hibernate.annotations.Cascade;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.time.LocalDateTime;
 import java.util.List;
-
 @Entity
 @Data
 @Table(name="users", schema = "organizer") //postgresql reserves name User
