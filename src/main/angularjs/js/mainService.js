@@ -1,6 +1,6 @@
 app.service('mainService',[
     '$http', function mainService($http){
-
+    console.log('zyje');
     var service = this;
     var url = 'http://localhost:8081/organizerApi';
     var tasks;
@@ -11,8 +11,7 @@ app.service('mainService',[
             method: 'GET',
             headers : {
                 'Content-Type': 'application/x-www-form-urlencoded',
-                'Access-Control-Request-Method': 'GET'
-
+                'Accept':'application/hal+json, text/html;charset=utf-8'
              },
             url: url+'/tasksForUser',
             params: {userId: userId}

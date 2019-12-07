@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
 
 @Entity
 @Data
-@Table(schema = "organizer")
+@Table(name = "task", schema = "organizer")
 public class Task
 {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)

@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
 
 @Entity
 @Data
-@Table(schema = "organizer")
+@Table(name = "note", schema = "organizer")
 public class Note
 {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
