@@ -13,10 +13,12 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class WebConfig implements WebMvcConfigurer {
     private final Logger log = LoggerFactory.getLogger(WebConfig.class);
 
-    @Override
-    public void addCorsMappings(CorsRegistry registry) {
-        log.info("com.lepczynski.hubert.organizer Web Config init");
-        registry.addMapping("/**")
-                .allowedOrigins("*")
-                .allowedMethods("PUT", "DELETE", "GET","POST");
-    }}
+//    @Override
+//    public void addCorsMappings(CorsRegistry registry) {
+//        log.info("com.lepczynski.hubert.organizer Web Config init");
+//        registry.addMapping("/**")
+//                .allowedOrigins("*")
+//                .allowedMethods("PUT", "DELETE", "GET","POST");
+//    }
+
+}
