@@ -3,13 +3,13 @@ package com.lepczynski.hubert.organizer.Controllers;
 import com.lepczynski.hubert.organizer.Models.DTOs.NoteDTO;
 import com.lepczynski.hubert.organizer.Services.NoteService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.hateoas.server.ExposesResourceFor;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin(origins = "*", allowCredentials = "true", allowedHeaders = "*")
 @Controller
 public class NoteController
 {
