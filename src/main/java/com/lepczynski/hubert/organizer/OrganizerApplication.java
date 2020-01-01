@@ -28,7 +28,7 @@ public class OrganizerApplication
         @Override
         public void configureRepositoryRestConfiguration(RepositoryRestConfiguration restConfig)
         {
-            restConfig.setBasePath("organizer");
+            restConfig.setBasePath("/organizer");
         }
     }
 }
