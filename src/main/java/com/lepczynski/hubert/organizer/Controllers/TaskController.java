@@ -48,21 +48,5 @@ public class TaskController
         return taskService.getTasksForUserByUserId(userId);
     }
 
-/*
-    @ResponseStatus(HttpStatus.CREATED)
-    @PutMapping("/tasksForUser")
-    public void updateTask(@RequestBody TaskDTO task)
-    {
-        taskService.update(task);
-    }
 
-
-    @ResponseStatus(HttpStatus.CREATED)
-    @PostMapping("/tasksForUser")
-    public void newTask(@RequestBody TaskDTO task)
-    {
-        taskService.save(task);
-    }
-
- */
 }
