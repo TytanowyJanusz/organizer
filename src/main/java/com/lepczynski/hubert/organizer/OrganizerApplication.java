@@ -21,4 +21,5 @@ public class OrganizerApplication
         SpringApplication.run(OrganizerApplication.class, args);
     }
 
+
 }
