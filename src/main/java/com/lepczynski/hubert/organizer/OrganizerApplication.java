@@ -15,11 +15,9 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @SpringBootApplication
 public class OrganizerApplication
 {
-
     public static void main(String[] args)
     {
         SpringApplication.run(OrganizerApplication.class, args);
     }
-
 
 }

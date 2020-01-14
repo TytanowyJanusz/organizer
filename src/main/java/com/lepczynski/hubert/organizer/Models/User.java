@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 @Entity
 @Data
-@Table(name="users", schema = "organizer") //postgresql reserves name User
+@Table(name="users", schema = "organizer") //postgresql reserves table name User
 public class User
 {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
