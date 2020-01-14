@@ -29,9 +29,12 @@ public class TaskController
     public ResponseEntity<TaskDTO> getTaskById(@PathVariable Long id)
     {
         //TODO check if current user has right to this - how to authentication?
-        ResponseEntity<TaskDTO> responeTaskDTO = new ResponseEntity<TaskDTO>(taskService.getTaskById(id), new HttpHeaders());
+        TaskDTO taskDTO = taskService.getTaskById(id);
 
-        return responeTaskDTO;
+        HttpHeaders httpHeaders = new HttpHeaders();
+        ResponseEntity<TaskDTO> responseTaskDTO = new ResponseEntity<TaskDTO>(taskDTO,  );
+
+        return responseTaskDTO;
     }
 
 
