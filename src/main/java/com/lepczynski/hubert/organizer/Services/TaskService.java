@@ -33,14 +33,13 @@ public class TaskService
 
     public TaskDTO getTaskById(Long id)
     {
-        return taskDTOModelAssembler.toModel(taskRepository.findById(id).
-                orElseThrow(() -> new EntityNotFoundException(id, "Task")));
+        return taskDTOModelAssembler.toModel(taskRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException(id, "Task")));
     }
 
     public CollectionModel<TaskDTO> getTasksForUserByUserId(Long userId)
     {
-        ArrayList<Task> tasks = new ArrayList<>(taskRepository.findByUserId(userId));
-        return taskDTOModelAssembler.toCollectionModel(tasks);
+        return taskDTOModelAssembler.toCollectionModel(new ArrayList<>(taskRepository.findByUserId(userId)));
     }
 
     public CollectionModel<TaskDTO> getAllTasks()
