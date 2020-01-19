@@ -6,11 +6,14 @@ import com.lepczynski.hubert.organizer.Models.DTOs.TaskDTO;
 import com.lepczynski.hubert.organizer.Models.Task;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.server.LinkBuilder;
 import org.springframework.hateoas.server.LinkRelationProvider;
 import org.springframework.hateoas.server.mvc.RepresentationModelAssemblerSupport;
 import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
 import org.springframework.stereotype.Component;
+
+import java.util.List;
 
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 
@@ -33,8 +36,20 @@ public class TaskDTOModelAssembler extends RepresentationModelAssemblerSupport<T
     }
 
     @Override
-
     public TaskDTO toModel(Task task)
+    {
+        TaskDTO taskDTO= modelMapper.map(task, TaskDTO.class);
+
+        taskDTO.add(linkTo(TaskController.class).withSelfRel());
+        taskDTO.add(linkTo(TaskController.class).withRel(linkRelProvider.getCollectionResourceRelFor(TaskDTO.class)));
+        //TODO add links for actions available on Task
+        //TODO how to let user navigate back to other parts of app?
+
+        return taskDTO;
+    }
+
+    @Override
+    public CollectionModel<TaskDTO> toCollectionModel(List<TaskDTO>)
     {
         TaskDTO taskDTO= modelMapper.map(task, TaskDTO.class);
 
